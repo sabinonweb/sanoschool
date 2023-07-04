@@ -40,6 +40,7 @@ const Login = () => {
                     <Icon />
                 </Animated.View>
             </Pressable>
+            <Text>THing</Text>
         </SafeAreaView>
     )
 }
