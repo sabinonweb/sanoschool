@@ -7,7 +7,7 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-na
 import { EmailInput, PasswordInput, SubmitButton } from '../../../components/login/LoginComponents'
 import AnimatedIcon from '../../../components/login/AnimatedIcon'
 import { FontAwesome5 } from '@expo/vector-icons';
-const Login = () => {
+const Signup = () => {
     const [email, setEmail] = useState<string>('')
     const [emailError, setEmailError] = useState<boolean>(false)
     const [passwordError, setPasswordError] = useState<boolean>(false)
@@ -22,7 +22,6 @@ const Login = () => {
 
     useEffect(() => {
         opacityButton.value = 1
-       
     }, [])
     function onSubmit(email: string, password: string) {
         if (email != 'sid') {
@@ -43,7 +42,7 @@ const Login = () => {
                 <View className='flex-1 '>
                     <View className='my-auto'>
                         <View className='px-6 py-6'>
-                            <Text className='text-5xl font-bold text-primary'>Login</Text>
+                            <Text className='text-5xl font-bold text-primary'>Create Account</Text>
                         </View>
                         <View className='p-5 py-3'>
                             <EmailInput value={email} setValue={setEmail} error={emailError} setError={setEmailError} />
@@ -52,11 +51,9 @@ const Login = () => {
                             <PasswordInput value={password} setValue={setPassword} error={passwordError} setError={setPasswordError} />
                         </View>
                         <View className='p-5 mt-4'>
-                            <SubmitButton label={"Create Account"}  action={() => { onSubmit(email, password) }} />
+                            <SubmitButton label={"Create Account"} action={() => { onSubmit(email, password) }} />
                         </View>
-                        <View className=''>
-                            <Text className='text-center text-primary font-light' style={{ fontSize: 12 }}>Forgot Password?</Text>
-                        </View>
+                       
                         <View className='flex flex-row mt-16 mx-auto space-x-3'>
                             <View className=''>
                                 <Pressable className='bg-fourth p-4 rounded-xl'>
@@ -81,9 +78,9 @@ const Login = () => {
 
 
 
-                <Pressable onPress={()=>router.push('/auth/signup')} className=' mt-auto border-t border-t-gray-200 py-5 mx-14'>
-                    <Text className='text-center text-primary'> Create an Account? </Text>
-                </Pressable>
+                <View className=' mt-auto border-t border-t-gray-200 py-5 mx-14'>
+                    <Text className='text-center text-primary'> Already have an account? </Text>
+                </View>
 
             </Animated.View>
         </SafeAreaView>
@@ -106,4 +103,4 @@ function Icon() {
 }
 
 
-export default Login
+export default Signup
