@@ -46,17 +46,17 @@ const Login = () => {
                             <Text className='text-5xl font-bold text-primary'>Login</Text>
                         </View>
                         <View className='p-5 py-3'>
-                            <EmailInput value={email} setValue={setEmail} error={emailError} setError={setEmailError} />
+                            <EmailInput label='Email' value={email} setValue={setEmail} error={emailError} setError={setEmailError} />
                         </View>
                         <View className='p-5 py-3'>
-                            <PasswordInput value={password} setValue={setPassword} error={passwordError} setError={setPasswordError} />
+                            <PasswordInput label='Password' value={password} setValue={setPassword} error={passwordError} setError={setPasswordError} />
                         </View>
                         <View className='p-5 mt-4'>
                             <SubmitButton label={"Create Account"}  action={() => { onSubmit(email, password) }} />
                         </View>
-                        <View className=''>
+                        <Pressable onPress={()=>router.push('auth/reset')} className=''>
                             <Text className='text-center text-primary font-light' style={{ fontSize: 12 }}>Forgot Password?</Text>
-                        </View>
+                        </Pressable>
                         <View className='flex flex-row mt-16 mx-auto space-x-3'>
                             <View className=''>
                                 <Pressable className='bg-fourth p-4 rounded-xl'>

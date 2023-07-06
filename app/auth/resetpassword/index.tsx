@@ -7,7 +7,7 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-na
 import { EmailInput, PasswordInput, SubmitButton } from '../../../components/login/LoginComponents'
 import AnimatedIcon from '../../../components/login/AnimatedIcon'
 import { FontAwesome5 } from '@expo/vector-icons';
-const Signup = () => {
+const Login = () => {
     const [email, setEmail] = useState<string>('')
     const [emailError, setEmailError] = useState<boolean>(false)
     const [passwordError, setPasswordError] = useState<boolean>(false)
@@ -22,8 +22,10 @@ const Signup = () => {
 
     useEffect(() => {
         opacityButton.value = 1
+
     }, [])
     function onSubmit(email: string, password: string) {
+        router.push('/auth/login')
         if (email != 'sid') {
             setEmailError(true)
         }
@@ -39,49 +41,24 @@ const Signup = () => {
                     <Ionicons name="chevron-back" size={32} color="#46486B" />
                 </Pressable>
                 <AnimatedIcon />
-                <View className='flex-1 '>
-                    <View className='my-auto'>
+                <View className='flex-1 pt-24'>
+                    <View className=''>
                         <View className='px-6 py-6'>
-                            <Text className='text-5xl font-bold text-primary'>Create Account</Text>
-                        </View>
-                        <View className='p-5 py-3'>
-                            <EmailInput label='Email' value={email} setValue={setEmail} error={emailError} setError={setEmailError} />
+                            <Text className='text-5xl font-bold text-primary'>New Password</Text>
                         </View>
                         <View className='p-5 py-3'>
                             <PasswordInput label='Password' value={password} setValue={setPassword} error={passwordError} setError={setPasswordError} />
+
+                        </View>
+                        <View className='p-5 py-3'>
+                            <PasswordInput label='Re-Enter Password' value={password} setValue={setPassword} error={passwordError} setError={setPasswordError} />
                         </View>
                         <View className='p-5 mt-4'>
-                            <SubmitButton label={"Create Account"} action={() => { onSubmit(email, password) }} />
+                            <SubmitButton label={"Change Password"} action={() => { onSubmit(email, password) }} />
                         </View>
-                       
-                        <View className='flex flex-row mt-16 mx-auto space-x-3'>
-                            <View className=''>
-                                <Pressable className='bg-fourth p-4 rounded-xl'>
-                                    <Ionicons name='logo-google' color={'white'} size={20} />
-                                </Pressable>
-                            </View>
-                            <View className=''>
-                                <Pressable className='bg-fourth p-4 rounded-xl'>
-                                    <FontAwesome5 name='facebook' color={'white'} size={20} />
-                                </Pressable>
-                            </View>
-                            <View className=''>
-                                <Pressable className='bg-fourth p-4 rounded-xl'>
-                                    <Ionicons name='logo-twitter' color={'white'} size={20} />
-                                </Pressable>
-                            </View>
-
-                        </View>
+                    
                     </View>
                 </View>
-
-
-
-
-                <View className=' mt-auto border-t border-t-gray-200 py-5 mx-14'>
-                    <Text className='text-center text-primary'> Already have an account? </Text>
-                </View>
-
             </Animated.View>
         </SafeAreaView>
     )
@@ -103,4 +80,4 @@ function Icon() {
 }
 
 
-export default Signup
+export default Login
