@@ -52,7 +52,7 @@ const Login = () => {
                             <PasswordInput label='Password' value={password} setValue={setPassword} error={passwordError} setError={setPasswordError} />
                         </View>
                         <View className='p-5 mt-4'>
-                            <SubmitButton label={"Create Account"}  action={() => { onSubmit(email, password) }} />
+                            <SubmitButton label={"Login"}  action={() => { router.replace('main') }} />
                         </View>
                         <Pressable onPress={()=>router.push('auth/reset')} className=''>
                             <Text className='text-center text-primary font-light' style={{ fontSize: 12 }}>Forgot Password?</Text>

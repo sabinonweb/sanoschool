@@ -4,6 +4,7 @@ import { Stack } from 'expo-router'
 import React from 'react'
 import Login from './auth/login'
 import Continue from './auth/continue'
+import Layout from './main/_layout'
 
 
 const Page = () => {
@@ -14,7 +15,7 @@ const Page = () => {
     return null
   }
   return (
-    <Continue/>
+    <Login/>
   )
 }
 
