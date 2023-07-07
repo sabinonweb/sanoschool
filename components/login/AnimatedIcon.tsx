@@ -35,8 +35,8 @@ const AnimatedIcon = () => {
 function Icon() {
     return (
         <Svg
-            width="80"
-            height="80"
+            width="60"
+            height="60"
             fill="none"
             viewBox="0 0 143 143"
         >

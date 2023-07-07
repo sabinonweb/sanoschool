@@ -29,7 +29,7 @@ export const EmailInput = (State: ChangeValueProps) => {
     }, [State.error])
     return (
         <Animated.View className=' rounded-xl flex flex-row ' style={[{ backgroundColor: '#DED4E0' }, animatedView]}>
-            <TextInput autoCapitalize='none' value={State.value} onChangeText={(txt) => { State.setError(false); State.setValue(txt) }} className={State.error ? 'p-4 py-6 rounded-xl border border-red-500 flex-1' : ' p-4 py-6 rounded-xl border border-secondary flex-1'} placeholder={State.label} placeholderTextColor={'#7a7c99'} />
+            <TextInput autoCapitalize='none' value={State.value} onChangeText={(txt) => { State.setError(false); State.setValue(txt) }} className={State.error ? 'p-4 py-4 rounded-xl border border-red-500 flex-1' : ' p-4 py-4 rounded-xl border border-secondary flex-1'} placeholder={State.label} placeholderTextColor={'#7a7c99'} />
         </Animated.View>
     )
 }
@@ -52,7 +52,7 @@ export const PasswordInput = (State: ChangeValueProps) => {
     }, [State.error])
     return (
         <Animated.View className={State.error ? ' rounded-xl border border-red-500 flex flex-row' : 'rounded-xl border border-secondary flex flex-row'} style={[{ backgroundColor: '#DED4E0' }, animatedView]}>
-            <TextInput autoCapitalize='none' maxLength={32} value={State.value} onChangeText={(txt) => { State.setError(false);State.setValue(txt) }} className=' p-4 py-6 rounded-xl flex-1' placeholder={State.label} secureTextEntry={visible} placeholderTextColor={'#7a7c99'} />
+            <TextInput autoCapitalize='none' maxLength={32} value={State.value} onChangeText={(txt) => { State.setError(false);State.setValue(txt) }} className=' p-4 py-4 rounded-xl flex-1' placeholder={State.label} secureTextEntry={visible} placeholderTextColor={'#7a7c99'} />
             <Pressable onPress={toggleVisible} className='justify-center px-5'>
                 <Ionicons name={visible ? 'eye' : 'eye-off'} size={20} color={'#46486B'} />
             </Pressable>

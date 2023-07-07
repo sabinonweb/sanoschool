@@ -1,9 +1,10 @@
-import { Text, SafeAreaView, Pressable, View } from 'react-native'
+import { Text, Pressable, View } from 'react-native'
 import React, { useEffect } from 'react'
 import Lottie from 'lottie-react-native'
 import Svg, { Path } from 'react-native-svg'
 import { useRouter, Stack } from 'expo-router'
 import Animated, { useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated'
+import { SafeAreaView } from 'react-native-safe-area-context'
 const Continue = () => {
     const router = useRouter()
     const opacityButton = useSharedValue(0)
@@ -32,17 +33,17 @@ const Continue = () => {
                         <Lottie source={require('../../../assets/animations/login/study2.json')} speed={1.5} autoPlay loop />
                     </View>
                     <View  className='h-44'>
-                        <Text className=' font-primary text-3xl text-center text-primary mx-10' >
+                        <Text className=' font-primary text-2xl text-center text-primary mx-10' >
                             Fastest Growing Learning Platform
                         </Text>
                     </View>
-                    <View>
+                    <View className='mb-10'>
                         <Pressable onPress={() => {
                             opacityButton.value = 0;
                             setTimeout(() => {
                                 router.push('/auth/login')
                             }, 400)
-                        }} className=' p-6 rounded-full bg-primary mt-auto px-14' >
+                        }} className=' p-5 rounded-full bg-primary mt-auto px-14' >
                             <Text className='text-center text-font1 font-light tracking-widest text-md' >Get Started</Text>
                         </Pressable>
                     </View>
@@ -54,8 +55,8 @@ const Continue = () => {
 function Icon() {
     return (
         <Svg
-            width="80"
-            height="80"
+            width="60"
+            height="60"
             fill="none"
             viewBox="0 0 143 143"
         >

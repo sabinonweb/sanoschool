@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image, Dimensions } from 'react-native'
+import { View, Text, SafeAreaView, Image, Dimensions, Pressable } from 'react-native'
 import React, { useEffect } from 'react'
 import Svg, { Path } from 'react-native-svg'
 import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useDerivedValue, useSharedValue, withSpring, withTiming } from 'react-native-reanimated'
@@ -44,7 +44,12 @@ const Home = () => {
     <SafeAreaView className='flex-1 bg-secondary flex flex-col'>
 
       <View className='flex-1 flex flex-col py-4'>
-        <Text className='text-3xl font-bold mx-4 mb-5'>Popular Services</Text>
+        <View className='flex flex-row justify-center pb-4'>
+          <Text className='text-2xl font-bold mx-4 mb-5 my-auto'>Popular Services</Text>
+          <Pressable className='ml-auto my-auto'>
+            <Text className='text-sm font-bold mx-4 mb-5 text-green-600 my-auto'>See All</Text>
+          </Pressable>
+        </View>
         <Carousel data={carouselData} />
       </View>
 
@@ -59,15 +64,15 @@ const Carousel = () => {
       transform: [{ translateX: -slider.value }]
     }
   })
-  const getBoxStyle = (index:number) => {
+  const getBoxStyle = (index: number) => {
     return useAnimatedStyle(() => {
       return {
         backgroundColor: slider.value / width === index ? '#46486B' : '#afafaf',
-        width:slider.value / width === index ? withSpring(30):14
+        width: slider.value / width === index ? withSpring(30) : 14
       };
     });
   };
-  
+
   const onGestureEvent = useAnimatedGestureHandler({
     onEnd: (event) => {
       if (event.translationX < -100) {
@@ -84,7 +89,7 @@ const Carousel = () => {
       }
     }
   })
- 
+
   return (
     <View>
       <PanGestureHandler onGestureEvent={onGestureEvent}>
@@ -99,10 +104,10 @@ const Carousel = () => {
         </Animated.View>
       </PanGestureHandler>
       <View className='flex flex-row mx-auto my-3'>
-        {carouselData.map((list,index) => {
+        {carouselData.map((list, index) => {
           return (
             <>
-              <Animated.View style={getBoxStyle(index)} className={index==slider.value/width?'w-3 h-3 rounded-full bg-primary mx-1':'w-3 h-3 rounded-full bg-gray-400 mx-1'}></Animated.View>
+              <Animated.View key={index} style={getBoxStyle(index)} className={index == slider.value / width ? 'w-3 h-3 rounded-full bg-primary mx-1' : 'w-3 h-3 rounded-full bg-gray-400 mx-1'}></Animated.View>
             </>
           )
         })}
