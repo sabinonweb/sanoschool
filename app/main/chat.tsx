@@ -83,7 +83,7 @@ const carouselData = [
 ]
 const message = () => {
   return (
-    <SafeAreaView style={{paddingBottom:-24}} className='flex-1 bg-secondary flex flex-col'>
+    <SafeAreaView style={{paddingBottom:-240}} className='flex-1 bg-secondary flex flex-col'>
       
       <View className='flex flex-col py-4 border-b-2 border-b-gray-200'>
         <View className='flex flex-row justify-center pb-1'>
@@ -94,9 +94,9 @@ const message = () => {
         </View>
       </View>
       <View className='flex-1 bg'>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }} className='flex flex-col flex-1 bg-'>
+      <ScrollView contentContainerStyle={{ flexGrow: 1 }} className='flex flex-col flex-1 bg'>
         {carouselData.map((list: any, index: number) => {
-          console.log(list.image)
+          // console.log(list.image)
           return (
             <View key={index} className='w-full px-4 py-4 border-b border-b-gray-200 flex flex-row overflow-hidden'>
               <Image source={{ uri: list.image }} className='w-16 h-16 rounded-full' resizeMode='cover' />
@@ -107,7 +107,7 @@ const message = () => {
               </View>
             </View>
           )
-        })}
+         })}
       </ScrollView>
       </View>
     </SafeAreaView>
