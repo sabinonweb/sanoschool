@@ -1,0 +1,17 @@
+    # <SafeAreaView className="flex flex-col">
+    #   <View className="flex-1">
+    #     <View className="flex-1 bg-black">
+    #       <View className="border-2 p-24 justify-end items-end" >
+    #         <Ionicons 
+    #         name="notifications-outline"
+    #         size={24}
+    #         color='black'
+    #         />
+    #         <View className="border-2 py-4 w-32 rounded-full"></View>
+    #         <View>
+    #             <Image source={require('../../../assets/images/green.png')} className="w-30 h-30"/>
+    #         </View>
+    #       </View>
+    #     </View>
+    #   </View>
+    # </SafeAreaView>

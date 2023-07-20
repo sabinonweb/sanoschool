@@ -96,7 +96,6 @@ const message = () => {
       <View className='flex-1 bg'>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }} className='flex flex-col flex-1 bg'>
         {carouselData.map((list: any, index: number) => {
-          // console.log(list.image)
           return (
             <View key={index} className='w-full px-4 py-4 border-b border-b-gray-200 flex flex-row overflow-hidden'>
               <Image source={{ uri: list.image }} className='w-16 h-16 rounded-full' resizeMode='cover' />
