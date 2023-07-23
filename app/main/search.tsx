@@ -49,7 +49,7 @@ const search = () => {
   return (
     <SafeAreaView className="flex-1">
       <View className="flex-1 px-4">
-        <TextInput className="border-2 p-4 w-full text-center bg-slate-400 rounded-full" placeholder="search">
+        <TextInput className="border-2 p-4 w-full text-center bg-slate-400 rounded-full" placeholder="Searches">
         </TextInput>
         <View className="flex-1 flex flex-col">
           {searchData.map((list: any, key: number) => (
