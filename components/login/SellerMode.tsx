@@ -75,7 +75,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View className="flex flex:0.8 items-start justify-start bg-red-900 py-4">
+      <View className="flex flex:0.8 items-start justify-start bg-orange-800 py-4">
         <Ionicons
           name="notifications-outline"
           size={32}
@@ -118,7 +118,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
           </Text>
           <Switch
             trackColor={{ false: "#f0bbbb", true: "#bbf0bf" }}
-            thumbColor={switchClicked ? "#038209" : "#820303"}
+            thumbColor={switchClicked ? "#038209" : "#9a3412"}
             ios_backgroundColor="#f0bbbb"
             onChange={handleSwitch}
             value={switchClicked}
@@ -126,7 +126,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
           />
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Text className="text-2xl left-5 font-bold mb-5 mt-6">
+          <Text className="text-xl left-5 font-bold mb-1 mt-6">
             Mero Pathshala
           </Text>
 
@@ -158,7 +158,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
             );
           })}
 
-          <Text className="text-2xl font-bold ml-5 mt-6">Settings</Text>
+          <Text className="text-xl font-bold ml-5 mt-1">Settings</Text>
 
           {settingsData.map((list, key) => {
             return (
@@ -188,7 +188,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
               </View>
             );
           })}
-          <Text className="text-2xl left-5 font-bold mb-5 mt-6">
+          <Text className="text-xl left-5 font-bold mb-5 mt-1">
             Mero Pathshala
           </Text>
 

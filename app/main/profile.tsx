@@ -70,7 +70,7 @@ const Profile = () => {
   ) : (
     //SellerModeOn
     <SafeAreaView style={{ flex: 1 }}>
-      <View className="flex flex:0.8 items-start justify-start bg-green-900">
+      <View className="flex flex:0.8 items-start justify-start bg-sky-950">
         <Ionicons
           name="notifications-outline"
           size={32}
@@ -117,11 +117,11 @@ const Profile = () => {
           className="items-center flex-col justify-center self-center py-1 px-5"
         >
           <Text className="text-sm font-bold self-start top-4">
-            Become a Teacher
+            Become a Student
           </Text>
           <Switch
-            trackColor={{ false: "#f0bbbb", true: "#bbf0bf" }}
-            thumbColor={switchClicked ? "#038209" : "#820303"}
+            trackColor={{ false: "#f0bbbb", true: "#7dd3fc" }}
+            thumbColor={switchClicked ? "#002244" : "#820303"}
             ios_backgroundColor="#f0bbbb"
             onChange={handleSwitch}
             value={switchClicked}
@@ -129,7 +129,7 @@ const Profile = () => {
           />
         </View>
         <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
-          <Text className="text-2xl left-5 font-bold mb-5 mt-6">Selling</Text>
+          <Text className="text-xl left-5 font-bold mb-1 mt-6">Selling</Text>
 
           {sellerData.map((list, key) => {
             return (
