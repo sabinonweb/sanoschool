@@ -1,12 +1,11 @@
-import { View, Text, Pressable } from 'react-native'
-import React, { useEffect, useRef } from 'react'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
+import { View, Pressable } from 'react-native'
+import React, { useRef } from 'react'
 import { Tabs } from 'expo-router'
-import { AntDesign, EvilIcons, Feather, Ionicons } from '@expo/vector-icons'
+import { AntDesign } from '@expo/vector-icons'
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated'
 
+
 const tabData = [
-  
   {
     name: "chat",
     title: "Chat",
@@ -59,6 +58,7 @@ const TabBar = (props: any) => {
     <View className='flex flex-row p-3 pb-6 bottom-0 bg-primary' style={{
       borderTopLeftRadius: 24,
       borderTopRightRadius: 24,
+
     }} >
       <Animated.View style={[animateTab,{height:40,width:60}]} className=' absolute bg-white rounded-full -z-10'></Animated.View>
       {props.state.routes.map((route: any, index: number) => {
@@ -80,15 +80,17 @@ const TabBar = (props: any) => {
 const Layout = () => {
 
   return (
-      <Tabs tabBar={(props) => <TabBar {...props} />} screenOptions={{ headerShown: false }}>
+      <Tabs tabBar={(props) => <TabBar {...props} />} screenOptions={{ headerShown: false }}>    
         {tabData.map((list, index) => {
           return (
             <Tabs.Screen key={index} name={list.name} options={{ title: list.name }} />
           )
         })}
-
       </Tabs>
   )
 }
+
+
+
 
 export default Layout
