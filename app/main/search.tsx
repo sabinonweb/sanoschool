@@ -1,67 +1,122 @@
-import { View, SafeAreaView, TextInput, ScrollView, Text } from "react-native";
+import {
+  View,
+  SafeAreaView,
+  TextInput,
+  ScrollView,
+  Text,
+} from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 const searchData = [
   {
     name: "Science",
     subText: "Newton and Einstein",
-    icon: "rocket-outline",
+    icon: "rocket",
   },
   {
     name: "नेपाली ",
     subText: "नेपाली हाँमी रहुँला कहाँ(नेपालै नरहे)",
-    icon: "ribbon-outline",
+    icon: "ribbon",
   },
   {
     name: "Moral Science",
     subText: "Hustle, Respect, Morality",
-    icon: "people-circle-outline",
+    icon: "people-circle",
   },
   {
-    name: "Compulsory Mathematics",
-    subText: "Algebra and Geometry Simplified",
-    icon: "stats-chart-outline",
+    name: "C. Mathematics",
+    subText: "Make Pythagoras proud",
+    icon: "stats-chart",
   },
   {
-    name: "Optional Mathematics",
+    name: "Opt. Mathematics",
     subText: "No Si(g)n of Tan(sion)",
-    icon: "pie-chart-outline",
+    icon: "pie-chart",
   },
   {
     name: "English",
-    subText: "Language in the form of language",
-    icon: "text-outline",
+    subText: "Language simplified",
+    icon: "text",
   },
   {
     name: "HPEE",
     subText: "Health is wealth",
-    icon: "thermometer-outline",
+    icon: "thermometer",
   },
   {
     name: "Social Studies",
     subText: "Start with yourself",
-    icon: "walk-outline",
+    icon: "walk",
   },
-]
+  {
+    name: "Science",
+    subText: "Newton and Einstein",
+    icon: "rocket",
+  },
+  {
+    name: "नेपाली ",
+    subText: "नेपाली हाँमी रहुँला कहाँ(नेपालै नरहे)",
+    icon: "ribbon",
+  },
+  {
+    name: "Moral Science",
+    subText: "Hustle, Respect, Morality",
+    icon: "people-circle",
+  },
+  {
+    name: "C. Mathematics",
+    subText: "Make Pythagoras proud",
+    icon: "stats-chart",
+  },
+  {
+    name: "Opt. Mathematics",
+    subText: "No Si(g)n of Tan(sion)",
+    icon: "pie-chart",
+  },
+  {
+    name: "English",
+    subText: "Language simplified",
+    icon: "text",
+  },
+  {
+    name: "HPEE",
+    subText: "Health is wealth",
+    icon: "thermometer",
+  },
+  {
+    name: "Social Studies",
+    subText: "Start with yourself",
+    icon: "walk",
+  },
+];
 const search = () => {
-  
-
   return (
-    <SafeAreaView className="flex-1">
-      <View className="flex-1 px-4">
-        <TextInput className="border-2 p-4 w-full text-center bg-slate-400 rounded-full" placeholder="Searches">
-        </TextInput>
-        <View className="flex-1 flex flex-col">
-          {searchData.map((list: any, key: number) => (
-            <View className="bg-gray-300" key={key}>
-              <Text className="text-2xl font-bold">{list.name}</Text>
-              <Ionicons name={list.icon} size={24} />
-            </View>
-          )
-          )}
-        </View>
+    <SafeAreaView className="flex-1 flex flex-col">
+      <View className="px-4">
+        <TextInput
+          className="border-2 p-4 w-full text-center bg-slate-200 rounded-full"
+          placeholder="Search"
+        ></TextInput>
       </View>
-      <ScrollView></ScrollView>
+      <ScrollView className=" flex-1 px-4">
+        <View className="flex flex-row flex-wrap">
+          {searchData.map((list: any, key: number) => (
+            <View
+              key={key}
+              className=" h-44 w-1/2 p-2"
+            >
+              <View
+                key={key}
+                className="p-3 bg-primary h-full w-full rounded-xl justify-center items-center  shadow-2xl"
+              >
+                <Text className="text-lg font-semibold text-slate-100">{list.name}</Text>
+                <Text className="text-sm text-slate-50">{list.subText}</Text>
+                <Ionicons name={list.icon} size={40} color='#f2d29d' />
+              </View>
+            </View>
+          ))}
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
