@@ -6,6 +6,11 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-na
 
 
 const tabData = [
+{
+  name: "search",
+  title: "Search",
+  icon: "search1"
+},
   {
     name: "order",
     title: "Orders",
@@ -22,11 +27,6 @@ const tabData = [
     icon: "home"
   },
 
-  {
-    name: "search",
-    title: "Search",
-    icon: "search1"
-  },
   {
     name: "profile",
     title: "Profile",
