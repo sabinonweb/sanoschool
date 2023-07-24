@@ -105,10 +105,10 @@ const search = () => {
 
   return (
     <SafeAreaView className="flex-1 flex flex-col">
-      <View className="px-4">
+      <View className= "px-4 mb-7">
         <TouchableOpacity
           onPress={pressHandler}
-          className="border-2 p-3 w-full text-center bg-slate-200 rounded-3xl flex-row"
+          className='p-4 rounded-xl border border-gray-300 text-gray-600'
           activeOpacity={0.95}
         >
           <TextInput
