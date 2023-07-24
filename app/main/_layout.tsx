@@ -7,6 +7,11 @@ import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-na
 
 const tabData = [
   {
+    name: "order",
+    title: "Orders",
+    icon: "switcher"
+  },
+  {
     name: "chat",
     title: "Chat",
     icon: "message1"
@@ -21,11 +26,7 @@ const tabData = [
     title: "Search",
     icon: "search1"
   },
-  {
-    name: "order",
-    title: "Orders",
-    icon: "switcher"
-  },
+
   {
     name: "profile",
     title: "Profile",
@@ -47,7 +48,7 @@ const TabBar = (props: any) => {
     const viewRef = viewRefs.current[index];
     if (viewRef) {
       viewRef.measure((x, y, width, height, pageX, pageY) => {
-        blockPositionX.value = withTiming(x+10, { duration: 200 })
+        blockPositionX.value = withTiming(x + 10, { duration: 200 })
       });
     }
     props.navigation.navigate(route)
@@ -60,14 +61,14 @@ const TabBar = (props: any) => {
       borderTopRightRadius: 24,
 
     }} >
-      <Animated.View style={[animateTab,{height:40,width:60}]} className=' absolute bg-white rounded-full -z-10'></Animated.View>
+      <Animated.View style={[animateTab, { height: 40, width: 60 }]} className=' absolute bg-white rounded-full -z-10'></Animated.View>
       {props.state.routes.map((route: any, index: number) => {
         return (
           <Pressable
             ref={(ref) => (viewRefs.current[index] = ref)}
             onPressIn={() => onPressInTab(index, route)}
             key={index}
-            style={{height:40,width:60}}
+            style={{ height: 40, width: 60 }}
             className={props.state.index === index ? 'flex-1 items-center rounded-full justify-center' : 'flex-1 items-center justify-center '}
           >
             <AntDesign color={props.state.index === index ? '#46486B' : '#fff'} size={20} name={tabData[index].icon.toString()} />
@@ -80,13 +81,13 @@ const TabBar = (props: any) => {
 const Layout = () => {
 
   return (
-      <Tabs tabBar={(props) => <TabBar {...props} />} screenOptions={{ headerShown: false }}>    
-        {tabData.map((list, index) => {
-          return (
-            <Tabs.Screen key={index} name={list.name} options={{ title: list.name }} />
-          )
-        })}
-      </Tabs>
+    <Tabs tabBar={(props) => <TabBar {...props} />} screenOptions={{ headerShown: false }}>
+      {tabData.map((list, index) => {
+        return (
+          <Tabs.Screen key={index} name={list.name} options={{ title: list.name }} />
+        )
+      })}
+    </Tabs>
   )
 }
 
