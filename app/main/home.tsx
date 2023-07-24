@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image, Dimensions, Pressable } from 'react-native'
+import { View, Text, SafeAreaView, Image, Dimensions, Pressable, TextInput, ScrollView } from 'react-native'
 import React, { useEffect } from 'react'
 import Svg, { Path } from 'react-native-svg'
 import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useDerivedValue, useSharedValue, withSpring, withTiming } from 'react-native-reanimated'
@@ -42,17 +42,69 @@ const carouselData = [
 const Home = () => {
   return (
     <SafeAreaView className='flex-1 bg-secondary flex flex-col'>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View className='flex-1 flex flex-col py-4'>
 
-      <View className='flex-1 flex flex-col py-4'>
-        <View className='flex flex-row justify-center pb-4'>
-          <Text className='text-2xl font-bold mx-4 mb-5 my-auto'>Popular Services</Text>
-          <Pressable className='ml-auto my-auto'>
-            <Text className='text-sm font-bold mx-4 mb-5 text-green-600 my-auto'>See All</Text>
-          </Pressable>
+
+          <View className=' px-4 mb-7'>
+            <TextInput className='p-4 rounded-xl border border-gray-300 text-gray-600' placeholder='Search Courses' />
+          </View>
+          <Carousel data={carouselData} />
+
+          <View className='flex flex-row justify-center pt-4 pb-2 px-2'>
+            <Text className='text-2xl font-bold mx-4 mb-5 my-auto'>Popular Services</Text>
+            <Pressable className='ml-auto my-auto'>
+              <Text className='text-sm font-bold mx-4 mb-5 text-green-600 my-auto'>See All</Text>
+            </Pressable>
+          </View>
+          <View className='my-3'>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              {carouselData.map((list, index) => {
+                return (
+                  <View key={index} className='w-72 px-4'>
+                    <Image source={{ uri: list.image }} className='w-full h-44 rounded-t-xl' resizeMode='cover' />
+                    <View className='bg-gray-200 w-full p-4 rounded-b-xl flex flex-col'>
+                      <View className="flex flex-row">
+                        <Image source={require('../../assets/images/sheldon.jpeg')} className='rounded-full w-7 h-7 object-cover' />
+
+                        <View className=' flex flex-col px-3'>
+                          <Text className='text-gray-800 text-[14px]'>Sid</Text>
+                          <Text className='text-gray-600 text-[10px]'>Rating: 4.6</Text>
+                        </View>
+                        <View className='px-3 ml-auto flex flex-row items-center justify-center'>
+                          <Text className='text-gray-800 text-[10px]'>Rs.</Text>
+                          <Text className='text-gray-600 text-[14px]'>150</Text>
+                        </View>
+                      </View>
+                      <View className='pt-4 pb-2'>
+                        <Text className='text-gray-800 text-[12px] text-justify tracking-tighter' >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
+                      </View>
+                    </View>
+                  </View>
+                )
+              })}
+            </ScrollView>
+          </View>
+          <View className='flex flex-row justify-center py-4 px-2'>
+            <Text className='text-2xl font-bold mx-4 mb-5 my-auto'>Live Classes</Text>
+            <Pressable className='ml-auto my-auto'>
+              <Text className='text-sm font-bold mx-4 mb-5 text-green-600 my-auto'>See All</Text>
+            </Pressable>
+          </View>
+          <View className='my-3'>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+              {carouselData.map((list, index) => {
+                return (
+                  <View key={index} className='mx-3'>
+                    <Image source={{ uri: list.image }} className='w-40 h-40 rounded-full' resizeMode='cover' />
+                   
+                  </View>
+                )
+              })}
+            </ScrollView>
+          </View>
         </View>
-        <Carousel data={carouselData} />
-      </View>
-
+      </ScrollView>
     </SafeAreaView>
   )
 }
@@ -91,7 +143,7 @@ const Carousel = () => {
   })
 
   return (
-    <View>
+    <View >
       <PanGestureHandler onGestureEvent={onGestureEvent}>
         <Animated.View style={[animatedStyle]} className='flex flex-row'>
           {carouselData.map((list, index) => {
