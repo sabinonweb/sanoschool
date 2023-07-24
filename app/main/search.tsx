@@ -104,7 +104,7 @@ const search = () => {
   }
 
   return (
-    <SafeAreaView className="flex-1 flex flex-col">
+    <SafeAreaView className="flex-1 flex flex-col bg-white">
       <View className= "px-4 mb-7">
         <TouchableOpacity
           onPress={pressHandler}
@@ -123,7 +123,7 @@ const search = () => {
         <SafeAreaView className="flex flex-1">
           <Modal animationType="slide" visible={searchClicked}>
             <View className="flex-1">
-              <View className="flex self-center border-2 p-2 mt-16 w-11/12 text-center bg-slate-200 rounded-3xl justify-start items-center flex-row">
+              <View className=" self-center mt-16 w-11/12 p-4 rounded-xl border border-gray-300 text-gray-600 flex-row">
               <TouchableOpacity onPress={pressHandlerClose} activeOpacity={0.95}>
                   <AntDesign name="closecircle" size={20}/>
                   </TouchableOpacity>
@@ -145,13 +145,13 @@ const search = () => {
             <View key={key} className=" h-44 w-1/2 p-2">
               <View
                 key={key}
-                className="p-3 bg-primary h-full w-full rounded-xl justify-center items-center  shadow-2xl"
+                className="p-3 bg-sky-100 h-full w-full rounded-xl justify-center items-center shadow-2xl"
               >
-                <Text className="text-lg font-semibold text-slate-100">
+                <Ionicons name={list.icon} size={40} color="grey" />
+                <Text className="text-lg font-semibold text-gray-600">
                   {list.name}
                 </Text>
-                <Text className="text-sm text-slate-50">{list.subText}</Text>
-                <Ionicons name={list.icon} size={40} color="#f2d29d" />
+                
               </View>
             </View>
           ))}
