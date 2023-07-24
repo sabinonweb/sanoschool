@@ -109,6 +109,7 @@ const search = () => {
         <TouchableOpacity
           onPress={pressHandler}
           className="border-2 p-3 w-full text-center bg-slate-200 rounded-3xl flex-row"
+          activeOpacity={0.95}
         >
           <TextInput
             className="text-center"
@@ -123,7 +124,7 @@ const search = () => {
           <Modal animationType="slide" visible={searchClicked}>
             <View className="flex-1">
               <View className="flex self-center border-2 p-2 mt-16 w-11/12 text-center bg-slate-200 rounded-3xl justify-start items-center flex-row">
-              <TouchableOpacity onPress={pressHandlerClose}>
+              <TouchableOpacity onPress={pressHandlerClose} activeOpacity={0.95}>
                   <AntDesign name="closecircle" size={20}/>
                   </TouchableOpacity>
                 <TextInput
