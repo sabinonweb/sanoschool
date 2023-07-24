@@ -21,12 +21,12 @@ const tabData = [
     title: "Home",
     icon: "home"
   },
+
   {
     name: "search",
     title: "Search",
     icon: "search1"
   },
-
   {
     name: "profile",
     title: "Profile",
