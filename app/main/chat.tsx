@@ -1,10 +1,13 @@
-import { View, Text, Pressable, ScrollView, Image } from 'react-native'
+import { View, Text, Pressable, ScrollView, Image, TouchableOpacity } from 'react-native'
+import { useRoute, useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import chat from '../../components/login/message'
+
 const carouselData = [
   {
     "image": "https://www.lifewire.com/thmb/pe-HqOKptr9JMz-ILbvCTnbF8BQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/The10BestEducationalWebsitesforTakingOnlineCoursesin2021-final-a1b955b29f624dfc84645c86f33d6c3b.jpg",
-    "category": "Robinhoodaaa",
+    "category": "Robin",
     "study_topic": "Ecology",
     "time_ago_uploaded": "2 hours ago",
     "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
@@ -82,6 +85,9 @@ const carouselData = [
   }
 ]
 const message = () => {
+
+  const navigation = useNavigation();
+
   return (
     <SafeAreaView style={{paddingBottom:-240}} className='flex-1 bg-secondary flex flex-col'>
       
