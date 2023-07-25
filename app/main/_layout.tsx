@@ -6,7 +6,7 @@ import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withTiming,
-} from "react-native-reanimated";
+} from "react-native-reanimated"; 
 
 const tabData = [
   {
@@ -59,6 +59,13 @@ const TabBar = (props: any) => {
     }
     props.navigation.navigate(route);
   }
+
+  const isChatScreen = props.state.routes[props.state.index].name === "message";
+
+  if (isChatScreen) {
+    return null;
+  }
+
 
   return (
     <View
