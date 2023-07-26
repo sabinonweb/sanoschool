@@ -85,11 +85,8 @@ const carouselData = [
   }
 ]
 const message = () => {
-
-  const navigation = useNavigation();
-
   return (
-    <SafeAreaView style={{paddingBottom:-240}} className='flex-1 bg-secondary flex flex-col'>
+    <SafeAreaView style={{paddingBottom:-24}} className='flex-1 bg-secondary flex flex-col'>
       
       <View className='flex flex-col py-4 border-b-2 border-b-gray-200'>
         <View className='flex flex-row justify-center pb-1'>

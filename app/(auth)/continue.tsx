@@ -18,7 +18,8 @@ const Continue = () => {
     }, [])
 
     return (
-        <SafeAreaView className='flex-1 flex flex-col bg-secondary '>
+        <SafeAreaView className='h-full flex flex-col bg-secondary '>
+            
             <Animated.View style={[animatedStyle]} className='flex-1'>
                 <Stack.Screen
                     options={{
@@ -30,7 +31,7 @@ const Continue = () => {
                 </View>
                 <View className='flex-1 justify-center items-center'>
                     <View className=' w-10/12 h-1/2 flex-1' >
-                        <Lottie source={require('../../../assets/animations/login/study2.json')} speed={1.5} autoPlay loop />
+                        <Lottie source={require('../../assets/animations/login/study2.json')} speed={1.5} autoPlay loop />
                     </View>
                     <View  className='h-44'>
                         <Text className=' font-primary text-2xl text-center text-primary mx-10' >
@@ -41,7 +42,7 @@ const Continue = () => {
                         <Pressable onPress={() => {
                             opacityButton.value = 0;
                             setTimeout(() => {
-                                router.push('/auth/login')
+                                router.push({pathname:'/login'})
                             }, 400)
                         }} className=' p-5 rounded-full bg-primary mt-auto px-14' >
                             <Text className='text-center text-font1 font-light tracking-widest text-md' >Get Started</Text>
