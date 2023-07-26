@@ -1,24 +1,21 @@
-import { LogBox } from 'react-native'
-import { useFonts } from 'expo-font'
-import { useRouter } from 'expo-router'
 import React from 'react'
+import { LogBox } from 'react-native';
+import { useFonts } from 'expo-font';
 
-const Page = () => {
-  LogBox.ignoreAllLogs()
-  const router=useRouter()
-  const [loaded] = useFonts({
-    'VarelaRound': require("../assets/fonts/VarelaRound.ttf")
-  })
-  if (!loaded) {
-    return null
-  }else{
-    router.replace('/main')
-  }
-  return (
-    <>
-     
-    </>
-  )
+
+const index = () => {
+    LogBox.ignoreAllLogs()
+    const [loaded] = useFonts({
+        'VarelaRound': require("../assets/fonts/VarelaRound.ttf")
+    })
+    if (!loaded) {
+        return null
+    }
+    return (
+        <></>
+    );
+
+
 }
 
-export default Page
+export default index
