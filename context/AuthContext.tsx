@@ -29,23 +29,21 @@ export const AuthProvider = ({ children }: any) => {
     async function checkAsync() {
         let state = await AsyncStorage.getItem('loggedIn')
         if (state !== null) {
-            console.log("val")
             let val = JSON.parse(state)
             if (val) {
                 setAuth({})
             } else {
-                setAuth()
+                setAuth(null)
             }
         } else {
             setAuth(null)
         }
-
     }
     useProtectedRoute(user)
     return (
         <AuthContext.Provider value={{
             signIn: async () => { setAuth({}); await AsyncStorage.setItem('loggedIn', JSON.stringify(true)) },
-            signOut: async () => { setAuth({}); await AsyncStorage.setItem('loggedIn', JSON.stringify(false)) },
+            signOut: async () => { setAuth(null); await AsyncStorage.setItem('loggedIn', JSON.stringify(false)) },
             user
         }}>
             {children}
