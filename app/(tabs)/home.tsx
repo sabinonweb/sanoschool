@@ -97,7 +97,7 @@ const Home = () => {
                 return (
                   <View key={index} className='mx-3'>
                     <Image source={{ uri: list.image }} className='w-40 h-40 rounded-full' resizeMode='cover' />
-                   
+
                   </View>
                 )
               })}
@@ -158,9 +158,7 @@ const Carousel = () => {
       <View className='flex flex-row mx-auto my-3'>
         {carouselData.map((list, index) => {
           return (
-            <>
-              <Animated.View key={index} style={getBoxStyle(index)} className={index == slider.value / width ? 'w-3 h-3 rounded-full bg-primary mx-1' : 'w-3 h-3 rounded-full bg-gray-400 mx-1'}></Animated.View>
-            </>
+            <Animated.View key={index} style={getBoxStyle(index)} className={index == slider.value / width ? 'w-3 h-3 rounded-full bg-primary mx-1' : 'w-3 h-3 rounded-full bg-gray-400 mx-1'}></Animated.View>
           )
         })}
       </View>
@@ -169,19 +167,4 @@ const Carousel = () => {
 }
 
 
-function Icon() {
-  return (
-    <Svg
-      width="30"
-      height="30"
-      fill="none"
-      viewBox="0 0 143 143"
-    >
-      <Path
-        fill="#333665"
-        d="M1.086 83.916a71.5 71.5 0 1151.668 56.583L71.5 71.5 1.086 83.916z"
-      ></Path>
-    </Svg>
-  );
-}
 export default Home
