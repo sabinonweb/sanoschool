@@ -12,6 +12,12 @@ import Animated, {
 const screenWidth = Dimensions.get('window')
 const tabData = [
     {
+        name: "search",
+        title: "Search",
+        icon: "search1",
+    },
+
+    {
         name: "home",
         title: "Home",
         icon: "home",
@@ -21,12 +27,7 @@ const tabData = [
         title: "Chat",
         icon: "message1",
     },
-    {
-        name: "search",
-        title: "Search",
-        icon: "search1",
-    },
-
+  
 
     {
         name: "order",
