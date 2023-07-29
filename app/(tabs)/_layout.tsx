@@ -69,7 +69,7 @@ const TabBar = (props: any) => {
 
     return (
         <View className="flex flex-row pb-6 bottom-0 bg-primary h-20">
-            <Animated.View style={[animatedBackground]} className="bg-secondary absolute">
+            <Animated.View style={[animatedBackground]} className="bg-white absolute">
                 <ImageBackground style={{ height: 110, width: section }} source={require('../../assets/images/Exclude.png')}>
                 </ImageBackground>
             </Animated.View>
