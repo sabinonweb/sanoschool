@@ -1,6 +1,6 @@
 import { View, Pressable, Dimensions, ImageBackground, Text } from "react-native";
 import React, { useRef, useState } from "react";
-import { Tabs } from "expo-router";
+import { Tabs, usePathname } from "expo-router";
 import { AntDesign } from "@expo/vector-icons";
 import Animated, {
     useAnimatedStyle,
@@ -11,20 +11,22 @@ import Animated, {
 
 const screenWidth = Dimensions.get('window')
 const tabData = [
+
     {
         name: "home",
         title: "Home",
         icon: "home",
     },
     {
-        name: "chat",
-        title: "Chat",
-        icon: "message1",
-    },
-    {
         name: "search",
         title: "Search",
         icon: "search1",
+    },
+
+    {
+        name: "chat",
+        title: "Chat",
+        icon: "message1",
     },
 
 
@@ -42,11 +44,15 @@ const tabData = [
 ];
 
 const TabBar = (props: any) => {
+    const tabLink = []
     const section = screenWidth.width / tabData.length
     const viewRefs = useRef([]);
     const blockPositionX = useSharedValue(0);
     const blockPositionY = useSharedValue(0);
 
+    tabData.map(item => {
+        tabLink.push("/" + item.name)
+    })
 
     function onPressInTab(index: number, route: any) {
         blockPositionY.value = withTiming(-20, { duration: 0 })
@@ -65,40 +71,44 @@ const TabBar = (props: any) => {
             transform: [{ translateY: -blockPositionY.value }]
         }
     })
-
     return (
-        <View className="flex flex-row pb-6 bottom-0 bg-primary h-20">
-            <Animated.View style={[animatedBackground]} className="bg-secondary absolute">
-                <ImageBackground style={{ height: 110, width: section }} source={require('../../assets/images/Exclude.png')}>
-                </ImageBackground>
-            </Animated.View>
-
-            {props.state.routes.map((route: any, index: number) => {
-                return (
-                    <Animated.View
-                        style={props.state.index === index && animatedTab}
-                        className="flex-1 h-full">
-                        <Pressable
-                            ref={(ref) => (viewRefs.current[index] = ref)}
-                            onPressIn={() => onPressInTab(index, route)}
-                            key={index}
-                            className={
-                                props.state.index === index
-                                    ? "items-center rounded-full justify-center relative bottom-6 bg-primary w-12 h-12 mx-auto"
-                                    : "items-center my-auto h-full"
-                            }
-                        >
-                            <AntDesign
-                                color={props.state.index === index ? "#fff" : "#fff"}
-                                size={16}
-                                style={{ marginTop: 'auto', marginBottom: 'auto' }}
-                                name={tabData[index].icon.toString()}
-                            />
-                        </Pressable>
+        <>
+            {tabLink.includes(usePathname()) &&
+                <View className="flex flex-row pb-6 bottom-0 bg-primary h-20">
+                    <Animated.View style={[animatedBackground]} className="bg-white absolute">
+                        <ImageBackground style={{ height: 110, width: section }} source={require('../../assets/images/Exclude.png')}>
+                        </ImageBackground>
                     </Animated.View>
-                );
-            })}
-        </View>
+
+                    {props.state.routes.map((route: any, index: number) => {
+                        return (
+                            <Animated.View
+                                style={props.state.index === index && animatedTab}
+                                className="flex-1 h-full">
+                                <Pressable
+                                    ref={(ref) => (viewRefs.current[index] = ref)}
+                                    onPressIn={() => onPressInTab(index, route)}
+                                    key={index}
+                                    className={
+                                        props.state.index === index
+                                            ? "items-center rounded-full justify-center relative bottom-6 bg-primary w-12 h-12 mx-auto"
+                                            : "items-center my-auto h-full"
+                                    }
+                                >
+                                    <AntDesign
+                                        color={props.state.index === index ? "#fff" : "#fff"}
+                                        size={16}
+                                        style={{ marginTop: 'auto', marginBottom: 'auto' }}
+                                        name={tabData[index] && tabData[index].icon.toString()}
+                                    />
+                                </Pressable>
+                            </Animated.View>
+                        );
+                    })}
+                </View>
+            }
+        </>
+
     );
 };
 const Layout = () => {
@@ -119,23 +129,5 @@ const Layout = () => {
         </Tabs>
     );
 };
-/*
-<Pressable
-                            ref={(ref) => (viewRefs.current[index] = ref)}
-                            onPressIn={() => onPressInTab(index, route)}
-                            key={index}
-                            style={{ height: 50, width: 50 }}
-                            className={
-                                props.state.index === index ?
-                                    " items-center justify-center bg-transparent w-20 h-20 bg-white" :
-                                    " items-center rounded-full justify-center w-20 h-20 border-b-3 border-b-primary"
-                            }
-                        >
-                            <AntDesign
-                                color={props.state.index === index ?
-                                    "#000" : "#fff"}
-                                size={14}
-                                name={tabData[index].icon.toString()}
-                            />
-                        </Pressable>*/
+
 export default Layout;

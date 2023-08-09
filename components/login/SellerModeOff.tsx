@@ -86,7 +86,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
         <Image
           source={require("../../assets/images/sheldon.jpeg")}
           style={{
-            borderRadius: 100
+            borderRadius: 100,
           }}
           className="w-16 h-16 ml-4 mt-28"
         />
@@ -117,8 +117,8 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
             Become a Teacher
           </Text>
           <Switch
-            trackColor={{ false: "#f0bbbb", true: "#bbf0bf" }}
-            thumbColor={switchClicked ? "#038209" : "#9a3412"}
+             trackColor={{ false: "#f0bbbb", true: "#7dd3fc" }}
+             thumbColor={switchClicked ? "#002244" : "#820303"}
             ios_backgroundColor="#f0bbbb"
             onChange={handleSwitch}
             value={switchClicked}
@@ -163,9 +163,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
           {settingsData.map((list, key) => {
             return (
               <View key={list.id}>
-                <View
-                  className="justify-center items-center"
-                >
+                <View className="justify-center items-center">
                   <Ionicons
                     name={list.icon}
                     size={32}
@@ -201,9 +199,7 @@ const SellerModeOff = ({ handleSwitch, switchClicked }) => {
                     size={32}
                     style={{ alignSelf: "flex-start", left: 20, top: 23 }}
                   />
-                  <Text
-                    className="text-sm font-bold self-start bottom-2 left-16"
-                  >
+                  <Text className="text-sm font-bold self-start bottom-2 left-16">
                     {list.name}
                   </Text>
                   <Ionicons
