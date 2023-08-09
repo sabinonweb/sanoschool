@@ -16,17 +16,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sidghimire.sanoschool"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.sidd_ghimire.sanoschool"
     },
     "web": {
       "bundler": "metro",
       "favicon": "./assets/images/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f701da0a-0bd1-438d-a148-16e71cefdfa4"
+      }
     }
   }
 }

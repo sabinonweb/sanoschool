@@ -1,8 +1,8 @@
-import { View, Text, SafeAreaView, Image, Dimensions, Pressable, TextInput, ScrollView } from 'react-native'
-import React, { useEffect } from 'react'
-import Svg, { Path } from 'react-native-svg'
-import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useDerivedValue, useSharedValue, withSpring, withTiming } from 'react-native-reanimated'
+import { View, Text, SafeAreaView, Image, Dimensions, Pressable, TextInput, ScrollView, Touchable, TouchableOpacity } from 'react-native'
+import React from 'react'
+import Animated, { useAnimatedGestureHandler, useAnimatedStyle, useSharedValue, withSpring, withTiming } from 'react-native-reanimated'
 import { PanGestureHandler } from 'react-native-gesture-handler'
+import { Link, router } from 'expo-router'
 
 const { width } = Dimensions.get('window')
 
@@ -59,30 +59,30 @@ const Home = () => {
           </View>
           <View className='my-3'>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              {carouselData.map((list, index) => {
-                return (
-                  <View key={index} className='w-72 px-4'>
-                    <Image source={{ uri: list.image }} className='w-full h-44 rounded-t-xl' resizeMode='cover' />
-                    <View className='bg-gray-200 w-full p-4 rounded-b-xl flex flex-col'>
-                      <View className="flex flex-row">
-                        <Image source={require('../../assets/images/sheldon.jpeg')} className='rounded-full w-7 h-7 object-cover' />
 
-                        <View className=' flex flex-col px-3'>
-                          <Text className='text-gray-800 text-[14px]'>Sid</Text>
-                          <Text className='text-gray-600 text-[10px]'>Rating: 4.6</Text>
-                        </View>
-                        <View className='px-3 ml-auto flex flex-row items-center justify-center'>
-                          <Text className='text-gray-800 text-[10px]'>Rs.</Text>
-                          <Text className='text-gray-600 text-[14px]'>150</Text>
-                        </View>
+              <Pressable onPress={()=>router.push('/home/details')}>
+                <View className='w-72 px-4'>
+                  <Animated.Image sharedTransitionTag="img" source={{ uri: carouselData[0].image }} className='w-full h-44 rounded-t-xl' resizeMode='cover' />
+
+                  <View className='bg-gray-200 w-full p-4 rounded-b-xl flex flex-col'>
+                    <View className="flex flex-row">
+                      <Image source={require('../../../assets/images/sheldon.jpeg')} className='rounded-full w-7 h-7 object-cover' />
+                      <View className=' flex flex-col px-3'>
+                        <Text className='text-gray-800 text-[14px]'>Sid</Text>
+                        <Text className='text-gray-600 text-[10px]'>Rating: 4.6</Text>
                       </View>
-                      <View className='pt-4 pb-2'>
-                        <Text className='text-gray-800 text-[12px] text-justify tracking-tighter' >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
+                      <View className='px-3 ml-auto flex flex-row items-center justify-center'>
+                        <Text className='text-gray-800 text-[10px]'>Rs.</Text>
+                        <Text className='text-gray-600 text-[14px]'>150</Text>
                       </View>
                     </View>
+                    <View className='pt-4 pb-2'>
+                      <Text className='text-gray-800 text-[12px] text-justify tracking-tighter' >Lorem Ipsum is simply dummy text of the printing and typesetting industry. </Text>
+                    </View>
                   </View>
-                )
-              })}
+                </View>
+              </Pressable>
+
             </ScrollView>
           </View>
           <View className='flex flex-row justify-center py-4 px-2'>
