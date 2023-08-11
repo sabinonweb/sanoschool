@@ -10,7 +10,7 @@ const carouselData = [
     "category": "Robin",
     "study_topic": "Ecology",
     "time_ago_uploaded": "2 hours ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -18,7 +18,7 @@ const carouselData = [
     "category": "James",
     "study_topic": "Architecture",
     "time_ago_uploaded": "1 day ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -26,7 +26,7 @@ const carouselData = [
     "category": "Alan",
     "study_topic": "Painting",
     "time_ago_uploaded": "3 weeks ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -34,7 +34,7 @@ const carouselData = [
     "category": "Adam",
     "study_topic": "Culinary Arts",
     "time_ago_uploaded": "2 months ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -42,14 +42,14 @@ const carouselData = [
     "category": "Curt",
     "study_topic": "Culinary Arts",
     "time_ago_uploaded": "2 months ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
   },
   {
     "image": "https://www.lifewire.com/thmb/pe-HqOKptr9JMz-ILbvCTnbF8BQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/The10BestEducationalWebsitesforTakingOnlineCoursesin2021-final-a1b955b29f624dfc84645c86f33d6c3b.jpg",
     "category": "Robin",
     "study_topic": "Ecology",
     "time_ago_uploaded": "2 hours ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -57,7 +57,7 @@ const carouselData = [
     "category": "James",
     "study_topic": "Architecture",
     "time_ago_uploaded": "1 day ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -65,7 +65,7 @@ const carouselData = [
     "category": "Alan",
     "study_topic": "Painting",
     "time_ago_uploaded": "3 weeks ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -73,7 +73,7 @@ const carouselData = [
     "category": "Adam",
     "study_topic": "Culinary Arts",
     "time_ago_uploaded": "2 months ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
 
   },
   {
@@ -81,13 +81,13 @@ const carouselData = [
     "category": "Curt",
     "study_topic": "Culinary Arts",
     "time_ago_uploaded": "2 months ago",
-    "message":'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
+    "message": 'Hi How are you doing sjdlfkjds sdkjlkdsjf dskfjldskf dskfjlsdkjflksd sdjflkjsdflks sdkfjsldkfjsdlf sdfkjsdklfjdslfsdf lksfjlsdkfjsdf sdkflsdkfjsdlf sdfnkjsfl'
   }
 ]
 const message = () => {
   return (
-    <SafeAreaView style={{paddingBottom:-24}} className='flex-1 bg-secondary flex flex-col'>
-      
+    <SafeAreaView style={{ paddingBottom: -20 }} className='flex-1 bg-secondary flex flex-col'>
+
       <View className='flex flex-col py-4 border-b-2 border-b-gray-200'>
         <View className='flex flex-row justify-center pb-1'>
           <Text className='text-2xl font-bold mx-4 mb-5 my-auto text-primary'>Inbox</Text>
@@ -97,20 +97,20 @@ const message = () => {
         </View>
       </View>
       <View className='flex-1 bg'>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }} className='flex flex-col flex-1 bg'>
-        {carouselData.map((list: any, index: number) => {
-          return (
-            <View key={index} className='w-full px-4 py-4 border-b border-b-gray-200 flex flex-row overflow-hidden'>
-              <Image source={{ uri: list.image }} className='w-16 h-16 rounded-full' resizeMode='cover' />
-              <View className='flex-1 flex flex-col px-8 overflow-hidden'>
-                <Text className='text-base font-medium'>{list.category}</Text>
-                <Text numberOfLines={1} style={{fontSize:12}} className=' overflow-ellipsis font-light'>{list.message}</Text>
-                <Text numberOfLines={1} style={{fontSize:10}} className=' italic overflow-ellipsis font-light mt-2'>{list.time_ago_uploaded}</Text>
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }} className='flex flex-col flex-1 bg'>
+          {carouselData.map((list: any, index: number) => {
+            return (
+              <View key={index} className='w-full px-4 py-4 border-b border-b-gray-200 flex flex-row overflow-hidden'>
+                <Image source={{ uri: list.image }} className='w-16 h-16 rounded-full' resizeMode='cover' />
+                <View className='flex-1 flex flex-col px-8 overflow-hidden'>
+                  <Text className='text-base font-medium'>{list.category}</Text>
+                  <Text numberOfLines={1} style={{ fontSize: 12 }} className=' overflow-ellipsis font-light'>{list.message}</Text>
+                  <Text numberOfLines={1} style={{ fontSize: 10 }} className=' italic overflow-ellipsis font-light mt-2'>{list.time_ago_uploaded}</Text>
+                </View>
               </View>
-            </View>
-          )
-         })}
-      </ScrollView>
+            )
+          })}
+        </ScrollView>
       </View>
     </SafeAreaView>
   )
