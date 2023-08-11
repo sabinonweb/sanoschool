@@ -41,7 +41,7 @@ const carouselData = [
 const GigDetail = () => {
     return (
         <View className='h-full'>
-            <TouchableOpacity activeOpacity={0.9} onPress={() => router.back()} className='absolute top-10 left-6 z-20 w-10 h-10 items-center justify-center bg-black rounded-full'>
+            <TouchableOpacity activeOpacity={0.9} onPress={() => router.back()} className='absolute top-10 left-6 z-50 w-10 h-10 items-center justify-center bg-black rounded-full'>
                 <Ionicons name='chevron-back' size={24} color={"#ffff"} />
             </TouchableOpacity>
             <Animated.Image sharedTransitionTag="img" source={{ uri: carouselData[0].image }} className='w-full h-2/5' />
@@ -88,9 +88,9 @@ const GigDetail = () => {
                                     </View>
                                 </View>
                                 <View className='pr-8'>
-                                <Animated.Text entering={FadeInLeft.duration(400).delay(400)} className='text-gray-600 text-[12px] py-2 text-justify'>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend. 
-                                </Animated.Text>
+                                    <Animated.Text entering={FadeInLeft.duration(400).delay(400)} className='text-gray-600 text-[12px] py-2 text-justify'>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend.
+                                    </Animated.Text>
                                 </View>
                             </View>
 
@@ -111,9 +111,9 @@ const GigDetail = () => {
                                     </View>
                                 </View>
                                 <View className='pr-8'>
-                                <Animated.Text entering={FadeInLeft.duration(400).delay(400)} className='text-gray-600 text-[12px] py-2 text-justify'>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend. 
-                                </Animated.Text>
+                                    <Animated.Text entering={FadeInLeft.duration(400).delay(400)} className='text-gray-600 text-[12px] py-2 text-justify'>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor urna nunc id cursus metus aliquam eleifend.
+                                    </Animated.Text>
                                 </View>
                             </View>
 
