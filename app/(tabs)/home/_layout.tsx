@@ -9,6 +9,10 @@ const StackLayout = () => {
 				name="details"
 				options={{ headerShown: false, animation: 'fade' }}
 			/>
+            <Stack.Screen
+				name="popularServices"
+				options={{ headerShown: false, animation: 'fade' }}
+			/>
 		</Stack>
 	);
 };

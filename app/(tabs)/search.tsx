@@ -147,7 +147,7 @@ const search = () => {
                 key={key}
                 className="p-3 bg-sky-100 h-full w-full rounded-xl justify-center items-center shadow-2xl"
               >
-                <Ionicons name={list.icon} size={40} color="grey" />
+                <Ionicons name={list.icon} size={24} color="grey" />
                 <Text className="text-lg font-semibold text-gray-600">
                   {list.name}
                 </Text>

@@ -53,14 +53,18 @@ const Home = () => {
 
           <View className='flex flex-row justify-center pt-4 pb-2 px-2'>
             <Text className='text-2xl font-bold mx-4 mb-5 my-auto'>Popular Services</Text>
+
             <Pressable className='ml-auto my-auto'>
-              <Text className='text-sm font-bold mx-4 mb-5 text-green-600 my-auto'>See All</Text>
+              <Link href={"/home/popularServices"}>
+                <Text className='text-sm font-bold mx-4 mb-5 text-green-600 my-auto mr-5'>See All</Text>
+              </Link>
+
             </Pressable>
           </View>
           <View className='my-3'>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
 
-              <Pressable onPress={()=>router.push('/home/details')}>
+              <Pressable onPress={() => router.push('/home/details')}>
                 <View className='w-72 px-4'>
                   <Animated.Image sharedTransitionTag="img" source={{ uri: carouselData[0].image }} className='w-full h-44 rounded-t-xl' resizeMode='cover' />
 
